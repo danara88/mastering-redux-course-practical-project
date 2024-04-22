@@ -1,0 +1,50 @@
+@import '../../../../styles/abstracts/variables';
+
+.todos-container {
+  min-height: 62.2rem;
+  max-height: 62.2rem;
+  overflow: hidden;
+}
+
+.todos {
+  &__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.7rem;
+    justify-content: space-between;
+    span {
+      color: $organizepro-blue;
+      font-size: 1.5rem;
+    }
+  }
+  &__content {
+    height: 100%;
+    overflow-y: auto;
+    min-height: 50rem;
+    max-height: 50rem;
+    &::-webkit-scrollbar {
+      width: 0.5rem; /* Width of the scrollbar */
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #f4f4f4; /* Color of the scrollbar handle */
+      border-radius: 1rem; /* Border radius of the scrollbar handle */
+    }
+    .todo {
+      &:first-child {
+        margin: 0rem;
+      }
+      &:last-child {
+        margin-bottom: 1rem;
+      }
+      margin: 1rem 0;
+    }
+    &--empty {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+  }
+  &__empty-message {
+    margin-top: 20rem;
+  }
+}

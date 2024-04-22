@@ -1,0 +1,10 @@
+.search-todo {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+  &__input {
+    margin-bottom: 1.7rem;
+  }
+}

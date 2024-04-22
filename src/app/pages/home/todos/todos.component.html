@@ -1,0 +1,18 @@
+<div class="todos-container wrapper">
+  <div class="todos">
+    <div class="todos__header">
+      <h2 class="wrapper-title todos__title">To-Do List</h2>
+      <!-- <span *ngIf="isSearch" (click)="clearSearch()" class="cursor-pointer"> Clear search</span> -->
+    </div>
+    <div class="todos__content" *ngIf="todos.length > 0">
+      <div class="todo" *ngFor="let todo of todos">
+        <organizepro-todo [todo]="todo"></organizepro-todo>
+      </div>
+    </div>
+    <div class="todos__content--empty" *ngIf="todos.length === 0">
+      <div class="todos__empty-message">
+        <span>You don't have todos</span>
+      </div>
+    </div>
+  </div>
+</div>
